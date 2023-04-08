@@ -8,6 +8,7 @@ export default {
 				secondary: '#FFCC29',
 				'primary-text': '#1E2338',
 				'secondary-text': '#828799',
+				'white-background': '#F9FBFC',
 			},
 		},
 	},

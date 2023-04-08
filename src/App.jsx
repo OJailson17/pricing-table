@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { PriceCard } from './components/PriceCard';
+import { MainPriceCard } from './components/PriceCard/MainCard';
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+	return (
+		<>
+			<div className='w-full h-[50vh] bg-primary'></div>
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+			<header className='w-full p-4 top-16 left-1/2 -translate-x-1/2 absolute'>
+				<h1 className='w-full text-white text-center text-5xl font-bold '>
+					Conheça nossos planos
+				</h1>
+
+				<p className='w-full text-white text-center text-base font-normal mt-5 lg:w-1/3 lg:mx-auto'>
+					Conheça nossas soluções e escolha o plano ideal para o seu próximo
+					projeto.
+				</p>
+			</header>
+
+			<div className='w-full flex items-center justify-center flex-col gap-5 -mt-24 mb-8 md:flex-wrap lg:flex-row lg:w-[90%] lg:mx-auto'>
+				<PriceCard />
+				<MainPriceCard />
+				<PriceCard plan={'Professional'} price={'59'} />
+			</div>
+		</>
+	);
 }
 
-export default App
+export default App;
