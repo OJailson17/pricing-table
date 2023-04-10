@@ -1,6 +1,6 @@
 export const MainPriceCard = () => {
 	return (
-		<div className='w-[90%] max-w-[355px] pb-11 bg-white rounded-lg flex flex-col shadow'>
+		<div className='w-[90%] max-w-[355px] pb-5 bg-white rounded-lg flex flex-col shadow relative'>
 			<div className='w-full bg-secondary px-5 py-6 rounded-t-lg flex items-center justify-between'>
 				<p className='text-lg text-primary font-semibold'>Básico</p>
 				<button className='w-24 h-8 bg-primary text-white rounded-full font-semibold text-xs'>
@@ -30,9 +30,13 @@ export const MainPriceCard = () => {
 					<img src='/check.svg' alt='' />
 					<p className='text-sm font-semibold'>Lorem ipsum dolor sit amet</p>
 				</div>
+				<div className=' text-secondary-text flex items-center gap-4'>
+					<img src='/check.svg' alt='' />
+					<p className='text-sm font-semibold'>Lorem ipsum dolor sit amet</p>
+				</div>
 			</div>
 
-			<button className='w-[90%] h-12 px-5 border-[1px] rounded-xl bg-primary mx-auto mt-32 text-white text-lg font-semibold'>
+			<button className='w-[90%] h-12 px-5 border-[1px] rounded-xl bg-primary mx-auto mt-24 text-white text-lg font-semibold'>
 				Assinar
 			</button>
 		</div>

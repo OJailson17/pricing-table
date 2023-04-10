@@ -1,6 +1,6 @@
-export const PriceCard = ({ price, plan }) => {
+export const PriceCard = ({ price, plan, bonus }) => {
 	return (
-		<div className='w-[90%] max-w-[355px] p-5 bg-white rounded-lg flex flex-col shadow'>
+		<div className='w-[90%] max-w-[355px] min-h-[470px] p-5 bg-white rounded-lg flex flex-col shadow relative'>
 			<p className='text-lg text-primary-text font-semibold'>
 				{plan || 'Free'}
 			</p>
@@ -19,17 +19,18 @@ export const PriceCard = ({ price, plan }) => {
 			<hr className='m-5' />
 
 			<div className='flex flex-col gap-5'>
-				<div className=' text-secondary-text flex items-center gap-4'>
-					<img src='/check.svg' alt='' />
-					<p className='text-sm font-semibold'>Lorem ipsum dolor sit amet</p>
-				</div>
-				<div className=' text-secondary-text flex items-center gap-4'>
-					<img src='/check.svg' alt='' />
-					<p className='text-sm font-semibold'>Lorem ipsum dolor sit amet</p>
-				</div>
+				{[...Array(bonus || 2)].map((el, i) => (
+					<div
+						key={`${el} - ${i}`}
+						className=' text-secondary-text flex items-center gap-4'
+					>
+						<img src='/check.svg' alt='' />
+						<p className='text-sm font-semibold'>Lorem ipsum dolor sit amet</p>
+					</div>
+				))}
 			</div>
 
-			<button className='w-[90%] h-12 border-[1px] border-primary rounded-xl bg-transparent mx-auto mt-32 text-primary text-lg font-semibold'>
+			<button className='w-[90%] h-12 absolute bottom-5 border-[1px] border-primary rounded-xl bg-transparent mx-auto  text-primary text-lg font-semibold'>
 				Assinar
 			</button>
 		</div>
