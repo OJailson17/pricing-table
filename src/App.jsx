@@ -4,7 +4,7 @@ import { MainPriceCard } from './components/PriceCard/MainCard';
 export function App() {
 	return (
 		<>
-			<div className='w-full min-h-[350px] bg-primary lg:h-[50vh]'>c</div>
+			<div className='w-full min-h-[350px] bg-primary lg:h-[50vh]'></div>
 
 			<header className='w-full h-full p-4 top-16 left-1/2 -translate-x-1/2 absolute'>
 				<h1 className='w-full text-white text-center text-5xl font-bold max-[375px]:text-4xl'>
