@@ -17,7 +17,7 @@ export function App() {
 				</p>
 			</header>
 
-			<div className='w-full flex items-center justify-center flex-col gap-5 -mt-24 mb-8 max-[375px]:-mt-16 md:flex-row-reverse md:flex-wrap lg:flex-nowrap lg:w-[90%] lg:mx-auto 2xl:-mt-32'>
+			<div className='w-full flex items-center justify-center flex-col gap-5 -mt-24 mb-8 max-[375px]:-mt-16 md:flex-row md:flex-wrap lg:flex-nowrap lg:w-[90%] lg:mx-auto 2xl:-mt-32'>
 				<PriceCard />
 				<MainPriceCard />
 				<PriceCard plan={'Profissional'} price={'59'} bonus={4} />
